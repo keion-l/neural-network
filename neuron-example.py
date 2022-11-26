@@ -15,3 +15,10 @@ class Neuron:
         #weight inputs and add the bias then user activation function
         total = np.dot(self.weights, inputs) + self.bias #using dot product
         return sigmoid(total)
+
+weights = np.array([0, 1]) # w1, w2
+bias = 4
+n = Neuron(weights, bias)
+
+x = np.array([2, 3]) #x1, x2
+print(n.feedforward(inputs=x))
