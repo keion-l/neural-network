@@ -28,3 +28,18 @@ class NeuralNetwork:
         self.h1 = Neuron(weights, bias)
         self.h2 = Neuron(weights, bias)
         self.o1 = Neuron(weights, bias)
+
+    def feedforward(self, x):
+        h1_output = self.h1.feedforward(x)
+        h2_output = self.h2.feedforward(x)
+
+        
+
+        o1_output = self.o1.feedforward(np.array([h1_output, h2_output]))
+
+        return o1_output
+
+network = NeuralNetwork()
+x = np.array([2, 3])
+
+print(network.feedforward(x)) # 0.7216325609518421 is the result
