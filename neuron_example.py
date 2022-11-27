@@ -21,4 +21,6 @@ bias = 4
 n = Neuron(weights, bias)
 
 x = np.array([2, 3]) #x1, x2
-print(n.feedforward(inputs=x))
+print(n.feedforward(inputs=x)) ### prints 0.999 approximately
+
+print(sigmoid(0.9256))
